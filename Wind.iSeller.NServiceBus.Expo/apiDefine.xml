@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<APIdefinition>
+  <interfaces>
+    <!--ServcieBus标准接口-->
+    <function appClass="1365" commandId="3903" functionName="GetServiceBusData">
+      <inputArgs>
+        <param name="requestMessageId" bindingID="System.String" fixedSize="0"/>
+        <param name="serviceAssemblyName" bindingID="System.String" fixedSize="0"/>
+        <param name="serviceCommandName" bindingID="System.String" fixedSize="0"/>
+        <param name="requestContent" bindingID="System.String" fixedSize="0"/>
+      </inputArgs>
+      <outputArgs>
+        <param name="responseMessageId" bindingID="System.String" fixedSize="0"/>
+        <param name="responseContent" bindingID="Wind.Comm.HugeString, Wind.Comm" fixedSize="0"/>
+        <param name="responseCode" bindingID="System.Int32" fixedSize="0"/>
+        <param name="errorInfo" bindingID="System.String" fixedSize="0"/>
+        <!--
+        100: 正常
+        
+        200: 命令未找到
+        201: 命令格式错误
+        202: 命令参数错误
+        
+        300: 业务逻辑错误
+        
+        400: 系统异常
+        
+        -->
+      </outputArgs>
+    </function>
+    <!--ServcieBus标准广播接口-->
+    <function appClass="1365" commandId="3902" functionName="GetServiceBusDataMulti">
+      <inputArgs>
+        <param name="requestMessageId" bindingID="System.String" fixedSize="0"/>
+        <param name="serviceAssemblyName" bindingID="System.String" fixedSize="0"/>
+        <param name="serviceCommandName" bindingID="System.String" fixedSize="0"/>
+        <param name="requestContent" bindingID="System.String" fixedSize="0"/>
+      </inputArgs>
+      <outputArgs>
+        <param name="responseMessageId" bindingID="System.String" fixedSize="0"/>
+        <param name="responseContent" bindingID="Wind.Comm.HugeString, Wind.Comm" fixedSize="0"/>
+        <param name="responseCode" bindingID="System.Int32" fixedSize="0"/>
+        <param name="errorInfo" bindingID="System.String" fixedSize="0"/>
+      </outputArgs>
+    </function>
+
+    <!--java ServiceBus-->
+    <function appClass="1040" commandId="2771" functionName="GetServiceBusData">
+      <inputArgs>
+        <param name="requestMessageId" bindingID="System.String" fixedSize="0"/>
+        <param name="serviceAssemblyName" bindingID="System.String" fixedSize="0"/>
+        <param name="serviceCommandName" bindingID="System.String" fixedSize="0"/>
+        <param name="requestContent" bindingID="System.String" fixedSize="0"/>
+      </inputArgs>
+      <outputArgs>
+        <param name="responseMessageId" bindingID="System.String" fixedSize="0"/>
+        <param name="responseContent" bindingID="Wind.Comm.HugeString, Wind.Comm" fixedSize="0"/>
+        <param name="responseCode" bindingID="System.Int32" fixedSize="0"/>
+        <param name="errorInfo" bindingID="System.String" fixedSize="0"/>
+        <!--
+        100: 正常
+        
+        200: 命令未找到
+        201: 命令格式错误
+        202: 命令参数错误
+        
+        300: 业务逻辑错误
+        
+        400: 系统异常
+        
+        -->
+      </outputArgs>
+    </function>
+    
+    <!--旧版iSeller接入-->
+    <function appClass="1365" commandId="3906" functionName="GetISellerData">
+      <inputArgs>
+        <param name="jsonRequest" bindingID="System.Byte[]" fixedSize="0"/>
+      </inputArgs>
+      <outputArgs>
+        <param name="jsonResponse" bindingID="System.Byte[]" fixedSize="0"/>
+      </outputArgs>
+    </function>
+  </interfaces>
+</APIdefinition>

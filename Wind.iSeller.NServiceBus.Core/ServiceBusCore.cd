@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Wind.iSeller.NServiceBus.Core.ServiceBus">
+    <Position X="8.25" Y="8.75" Width="5.25" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAIAACAAAAAQAAAADgIAAAAAQAAQAAQCAAA=</HashCode>
+      <FileName>ServiceBus.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Wind.iSeller.NServiceBus.Core.ServiceBusInstaller">
+    <Position X="5.25" Y="9.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAQAEAIAAAAAAAAAAACAAAAIIAAAAAAA=</HashCode>
+      <FileName>ServiceBusInstaller.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="serviceBusRegistry" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Wind.iSeller.NServiceBus.Core.MetaData.ServiceBusRegistry">
+    <Position X="1.75" Y="9.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAYQAAAAIAAAEAAAACAACABAAAAAAAAAQ=</HashCode>
+      <FileName>MetaData\ServiceBusRegistry.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="serviceBusDic" />
+      <Field Name="serviceAssemblyDic" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.252" />
+  </Class>
+  <Class Name="Wind.iSeller.NServiceBus.Core.MetaData.ServiceAssemblyInfo">
+    <Position X="1.75" Y="13.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>ACBAgAIAAAAAAAAEgAAAAAQAAAAAAICAAAACAAABAAQ=</HashCode>
+      <FileName>MetaData\ServiceAssemblyInfo.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="serviceBusSet" />
+      <Field Name="serviceCommandDic" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Wind.iSeller.NServiceBus.Core.MetaData.ServiceBusServerInfo">
+    <Position X="5.25" Y="13.5" Width="2" />
+    <NestedTypes>
+      <Class Name="Wind.iSeller.NServiceBus.Core.MetaData.ServiceBusServerInfo.ExpoServer" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>MetaData\ServiceBusServerInfo.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAACEgAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>MetaData\ServiceBusServerInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Wind.iSeller.NServiceBus.Core.MetaData.ServiceCommandTypeInfo">
+    <Position X="8" Y="13.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAACAAAAAAAAAAAAAAAAAAAAARAAAAAA=</HashCode>
+      <FileName>MetaData\ServiceCommandTypeInfo.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ServiceCommandUniqueName" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Wind.iSeller.NServiceBus.Core.MetaData.ServiceUniqueNameInfo">
+    <Position X="11.5" Y="13.5" Width="2.75" />
+    <NestedTypes>
+      <Enum Name="Wind.iSeller.NServiceBus.Core.MetaData.ServiceUniqueNameInfo.ServiceMessageType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>MetaData\ServiceUniqueNameInfo.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAgAAgIAAAAEAAAEgAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>MetaData\ServiceUniqueNameInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Wind.iSeller.NServiceBus.Core.Dispatchers.LocalServiceCommandDispatcher">
+    <Position X="1.5" Y="6.5" Width="2.75" />
+    <AssociationLine Name="registry" Type="Wind.iSeller.NServiceBus.Core.MetaData.ServiceBusRegistry" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.25" Y="7.687" />
+        <Point X="4.625" Y="7.687" />
+        <Point X="4.625" Y="9.75" />
+        <Point X="4" Y="9.75" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAACAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Dispatchers\LocalServiceCommandDispatcher.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="registry" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Wind.iSeller.NServiceBus.Core.Dispatchers.RemoteServiceCommandDispatcher">
+    <Position X="5.25" Y="5.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAIAAAAIAAAAAAAQAAgAEAAAAA=</HashCode>
+      <FileName>Dispatchers\RemoteServiceCommandDispatcher.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="rpcServerManager" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Wind.iSeller.NServiceBus.Core.RPC.RpcServerManager">
+    <Position X="9.25" Y="5.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACEBIAgACAAAAAAAQAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>RPC\RpcServerManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="rpcServers" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Wind.iSeller.NServiceBus.Core.Dispatchers.RemoteServiceCommandProcessor">
+    <Position X="5.25" Y="2.75" Width="2.75" />
+    <AssociationLine Name="serviceBusRegistry" Type="Wind.iSeller.NServiceBus.Core.MetaData.ServiceBusRegistry" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.25" Y="3.688" />
+        <Point X="0.596" Y="3.688" />
+        <Point X="0.596" Y="9.75" />
+        <Point X="1.75" Y="9.75" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAIAAAAAAAAIAAAAAgAAAAAAAABAAIAAAAAAA=</HashCode>
+      <FileName>Dispatchers\RemoteServiceCommandProcessor.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="serviceBusRegistry" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Wind.iSeller.NServiceBus.Core.RPC.RpcTransportMessage">
+    <Position X="15.5" Y="13.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAQCAEAAAAAAAAAAAEAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>RPC\RpcTransportMessage.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="MessageHeader" />
+      <Property Name="ServiceUniqueName" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Wind.iSeller.NServiceBus.Core.RPC.RpcTransportMessageHeader" Collapsed="true">
+    <Position X="19.25" Y="14" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RPC\RpcTransportMessageHeader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Wind.iSeller.NServiceBus.Core.RPC.RpcTransportMessageRequest" Collapsed="true">
+    <Position X="15" Y="16.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RPC\RpcTransportMessageRequest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Wind.iSeller.NServiceBus.Core.RPC.RpcTransportMessageResponse" Collapsed="true">
+    <Position X="18.5" Y="16.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAQAAAAAEAAAAAAAAAAAAAgAAAAAAAAAAAQA=</HashCode>
+      <FileName>RPC\RpcTransportMessageResponse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Wind.iSeller.NServiceBus.Core.RPC.IRpcServer">
+    <Position X="14.75" Y="7.5" Width="2" />
+    <AssociationLine Name="Configuration" Type="Wind.iSeller.NServiceBus.Core.RPC.IRpcServerConfiguration" FixedToPoint="true">
+      <Path>
+        <Point X="15.938" Y="9.749" />
+        <Point X="15.938" Y="10.75" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="ContextBuilder" Type="Wind.iSeller.NServiceBus.Core.RPC.IRpcMessageSenderContextBuilder" FixedToPoint="true">
+      <Path>
+        <Point X="15" Y="7.5" />
+        <Point X="15" Y="6.098" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAECCAAAAAAAAAAAAAAAAAAIBAoAAAAAAAAAA=</HashCode>
+      <FileName>RPC\IRpcServer.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Configuration" />
+      <Property Name="ContextBuilder" />
+    </ShowAsAssociation>
+  </Interface>
+  <Interface Name="Wind.iSeller.NServiceBus.Core.RPC.IRpcMessageSenderContext">
+    <Position X="17.5" Y="7.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAACABAAAAAAAAAAAA=</HashCode>
+      <FileName>RPC\IRpcMessageSenderContext.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Wind.iSeller.NServiceBus.Core.RPC.IRpcMessageSenderContextBuilder">
+    <Position X="14.25" Y="5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RPC\IRpcMessageSenderContextBuilder.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Wind.iSeller.NServiceBus.Core.RPC.IRpcServerConfiguration">
+    <Position X="14.75" Y="10.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RPC\IRpcServerConfiguration.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="微软雅黑" Size="9" />
+</ClassDiagram>
